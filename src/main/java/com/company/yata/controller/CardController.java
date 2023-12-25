@@ -1,0 +1,42 @@
+package com.company.yata.controller;
+
+import com.company.yata.dto.CardDto;
+import com.company.yata.dto.ResponseDto;
+import com.company.yata.service.CardService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
+
+@RestController
+@RequestMapping("card")
+@RequiredArgsConstructor
+public class CardController {
+    private final CardService cardService;
+
+    @PostMapping("/create")
+    public ResponseDto<CardDto> create(@RequestBody CardDto dto) {
+        return cardService.create(dto);
+    }
+
+    @GetMapping(value = ("/get/{id}"))
+    public ResponseDto<CardDto> get(@PathVariable("id") Integer id) {
+        return cardService.get(id);
+    }
+
+    @GetMapping(value = ("/get-all"))
+    public ResponseDto<Page<CardDto>> getAll(@RequestParam Map<String, String> params) {
+        return cardService.getAll(params);
+    }
+
+    @PutMapping(value = "/update/{id}")
+    public ResponseDto<CardDto> update(@PathVariable("id") Integer id, @RequestBody CardDto dto) {
+        return cardService.update(dto, id);
+    }
+
+    @DeleteMapping(value = ("/delete/{id}"))
+    public ResponseDto<CardDto> delete(@PathVariable("id") Integer id) {
+        return cardService.delete(id);
+    }
+}
