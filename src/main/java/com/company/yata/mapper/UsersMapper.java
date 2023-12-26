@@ -14,5 +14,5 @@ public abstract class UsersMapper {
     public abstract UsersDto toDto(Users product);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    public abstract Users updateProductFromDto(UsersDto dto, @MappingTarget Users product);
+    public abstract Users updateUsersFromDto(UsersDto dto, @MappingTarget Users product);
 }
