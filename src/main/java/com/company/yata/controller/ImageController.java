@@ -4,10 +4,10 @@ import com.company.yata.dto.ImageDto;
 import com.company.yata.dto.ResponseDto;
 import com.company.yata.service.ImageService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
-import java.util.Map;
+import java.util.Set;
 
 @RestController
 @RequestMapping("image")
@@ -15,19 +15,19 @@ import java.util.Map;
 public class ImageController {
     private final ImageService imageService;
 
-    @PostMapping("/create")
-    public ResponseDto<ImageDto> create(@RequestBody ImageDto dto) {
-        return imageService.create(dto);
+    @PostMapping("/upload")
+    public ResponseDto<ImageDto> upload(@RequestBody MultipartFile image) {
+        return imageService.upload(image);
     }
 
-    @GetMapping(value = ("/get/{id}"))
-    public ResponseDto<ImageDto> get(@PathVariable("id") Integer id) {
+    @GetMapping(value = ("/download/{id}"))
+    public ResponseDto<ImageDto> download(@PathVariable("id") Integer id) {
+        return imageService.download(id);
+    }
+
+    @GetMapping(value = ("/get-image-by-user/{id}"))
+    public ResponseDto<Set<ImageDto>> get(@PathVariable("id") Integer id) {
         return imageService.get(id);
-    }
-
-    @GetMapping(value = ("/get-all"))
-    public ResponseDto<Page<ImageDto>> getAll(@RequestParam Map<String, String> params) {
-        return imageService.getAll(params);
     }
 
     @PutMapping(value = "/update/{id}")
