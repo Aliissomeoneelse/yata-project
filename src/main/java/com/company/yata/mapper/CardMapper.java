@@ -11,8 +11,8 @@ import org.mapstruct.NullValuePropertyMappingStrategy;
 public abstract class CardMapper {
     public abstract Card toEntity(CardDto dto);
 
-    public abstract CardDto toDto(Card product);
+    public abstract CardDto toDto(Card card);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    public abstract Card updateProductFromDto(CardDto dto, @MappingTarget Card product);
+    public abstract Card updateCardFromDto(CardDto dto, @MappingTarget Card card);
 }

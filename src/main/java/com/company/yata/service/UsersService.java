@@ -25,7 +25,7 @@ public class UsersService {
             this.usersRepository.save(user);
             return ResponseDto.<UsersDto>builder()
                     .success(true)
-                    .message("User successful created!")
+                    .message("User successfully created!")
                     .data(usersMapper.toDto(user))
                     .build();
         } catch (Exception e) {
@@ -73,7 +73,7 @@ public class UsersService {
             usersRepository.save(user);
             return ResponseDto.<UsersDto>builder()
                     .success(true)
-                    .message("User successful updated!")
+                    .message("User successfully updated!")
                     .data(usersMapper.toDto(user))
                     .build();
         } catch (Exception e) {
@@ -99,7 +99,7 @@ public class UsersService {
             usersRepository.save(user);
             return ResponseDto.<UsersDto>builder()
                     .success(true)
-                    .message("User successful deleted!")
+                    .message("User successfully deleted!")
                     .data(usersMapper.toDto(user))
                     .build();
         } catch (Exception e) {
