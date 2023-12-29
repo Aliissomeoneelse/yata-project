@@ -15,11 +15,12 @@ import java.util.Map;
 public class UsersController {
     private final UsersService usersService;
 
+    @CrossOrigin(origins = "*")
     @PostMapping("/create")
     public ResponseDto<UsersDto> create(@RequestBody UsersDto dto) {
         return usersService.create(dto);
     }
-
+    @CrossOrigin(origins = "*")
     @GetMapping(value = ("/get/{id}"))
     public ResponseDto<UsersDto> get(@PathVariable("id") Integer id) {
         return usersService.get(id);
