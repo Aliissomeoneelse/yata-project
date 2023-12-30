@@ -12,14 +12,13 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class UsersDto {
+public class WishlistDto {
     private Integer id;
-    private String username;
-    private String email;
-    private String password;
-    private Set<CardDto> cards;
-    private Set<BasketDto> baskets;
-    private Set<WishlistDto> wishlists;
+
+    private Set<ProductDto> products;
+
+    private Integer usersId;
+
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private LocalDateTime deletedAt;

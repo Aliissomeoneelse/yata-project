@@ -19,6 +19,8 @@ public class ProductDto {
 
     private Integer imageId;
 
+    private Integer basketId;
+
     private String createdAt;
     private String updatedAt;
     private String deletedAt;
