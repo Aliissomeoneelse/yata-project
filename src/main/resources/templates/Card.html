@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+        .form-container {
+            width: 350px;
+            position: absolute;
+            background: white;
+            border-radius: 30px;
+            border: 1px solid black;
+        }
+        input {
+            width: calc(100% - 20px);
+            height: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 16px;
+        }
+        .form-label {
+            position: absolute;
+            color: black;
+            font-size: 24px;
+            font-weight: 400;
+        }
+        .header-text {
+            position: absolute;
+            color: black;
+            font-size: 32px;
+            font-weight: 400;
+        }
+        .copyright-text {
+            position: absolute;
+            color: black;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        .confirm-button {
+            width: 120px;
+            height: 50px;
+            position: absolute;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div style="width: 1080px; height: 760px; position: relative; background: white">
+
+    <img style="width: 100px; height: 100px; left: 470px; top: 30px; position: absolute" src="https://drive.google.com/uc?id=1mwyJRkQHXpXDvc-_ZYV2u1AKI5KjCNCa" />
+    <img style="width: 100px; height: 100px; left: 590px; top: 30px; position: absolute" src="https://drive.google.com/uc?id=1uk_IWBGgaOh_5JW6wOKYtlCq0wT1USJl" />
+    <img style="width: 100px; height: 100px; left: 830px; top: 30px; position: absolute" src="https://drive.google.com/uc?id=17kXiU_FBu7idLHJyJuZwvnyl8871CMtB" />
+    <img style="width: 100px; height: 90px; left: 950px; top: 35px; position: absolute" src="https://drive.google.com/uc?id=1SR0nKz8VuIDjTSf73h2M7-GTZtBTCNsZ" />
+    <img style="width: 100px; height: 67px; left: 710px; top: 46px; position: absolute" src="https://drive.google.com/uc?id=1bkaoDJOe4ioBgkhsDZ7lt-UAdBpvxAnv" />
+
+    <div class="header-text" style="left: 520px; top: -5px;">Fill in the credit card information</div>
+
+    <div class="form-container" style="left: 590px; top: 163px;">
+        <input type="text" placeholder="Name">
+        <div class="form-label" style="top: -40px; left: 0px;">Name</div>
+    </div>
+
+    <div class="form-container" style="left: 590px; top: 250px;">
+        <input type="text" placeholder="Surname">
+        <div class="form-label" style="top: -40px; left: 0px;">Surname</div>
+    </div>
+
+    <div class="form-container" style="left: 590px; top: 337px;">
+        <input type="text" placeholder="Card Number">
+        <div class="form-label" style="top: -40px; left: 0px;">Card Number</div>
+    </div>
+
+    <div class="form-container" style="left: 590px; top: 511px;">
+        <input type="text" placeholder="CVV/CVV2">
+        <div class="form-label" style="top: -40px; left: 0px;">CVV/CVV2</div>
+    </div>
+
+    <div class="form-container" style="left: 590px; top: 424px;">
+        <input type="text" placeholder="MM/YYYY">
+        <div class="form-label" style="top: -40px; left: 0px;">Validity (Month/Year)</div>
+    </div>
+
+    <div class="confirm-button" id="confirmButton" style="left: 710px; top: 581px;">
+        <div class="form-label" style="top: 10px; left: 11px;">Confirm</div>
+    </div>
+
+    <div class="copyright-text" style="left: 550px; top: 728px;">Yata Marketplace ©. All rights reserved. 2024</div>
+    <div class="copyright-text" style="left: 565px; top: 650px;">Digital Payments are secured by PCI DSS</div>
+    <div class="copyright-text" style="left: 660px; top: 689px;">Powered by World Bank</div>
+
+    <!-- Add your JavaScript script -->
+    <script>
+        document.getElementById('confirmButton').addEventListener('click', function() {
+            alert('Confirm button clicked!'); // You can replace this with your actual logic
+        });
+    </script>
+</div>
+
+</body>
+</html>
+</html>
