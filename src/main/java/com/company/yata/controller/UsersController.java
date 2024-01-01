@@ -25,17 +25,17 @@ public class UsersController {
     public ResponseDto<UsersDto> get(@PathVariable("id") Integer id) {
         return usersService.get(id);
     }
-
+    @CrossOrigin(origins = "*")
     @GetMapping(value = ("/get-all"))
     public ResponseDto<Page<UsersDto>> getAll(@RequestParam Map<String, String> params) {
         return usersService.getAll(params);
     }
-
+    @CrossOrigin(origins = "*")
     @PutMapping(value = "/update/{id}")
     public ResponseDto<UsersDto> update(@PathVariable("id") Integer id, @RequestBody UsersDto dto) {
         return usersService.update(dto, id);
     }
-
+    @CrossOrigin(origins = "*")
     @DeleteMapping(value = ("/delete/{id}"))
     public ResponseDto<UsersDto> delete(@PathVariable("id") Integer id) {
         return usersService.delete(id);
