@@ -13,6 +13,8 @@ $(document).ready(function() {
                     // Вывод данных на странице
                     $("#username").text(response.data.username);
                     $("#email").text(response.data.email);
+                    $("#created-at").text(response.data.createdAt);
+                    $("#updated-at").text(response.data.updatedAt);
                     // Добавьте другие поля, если они есть
                 } else {
                     alert("Failed to retrieve user data: " + response.message);
