@@ -23,7 +23,7 @@ $(document).ready(function() {
                     alert("User created successfully!");
                     let id = response.data.id
                     $.cookie("id", id);
-                    window.location.href="get.html"
+                    // window.location.href="get.html"
                     // You can add a redirection here if needed
                 } else {
                     alert("User creation failed: " + response.message);

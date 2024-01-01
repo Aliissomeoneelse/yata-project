@@ -1,105 +1,114 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<html xmlns:th="http://www.thymeleaf.org">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<!--    <title>Yata Marketplace</title>-->
-<!--    <style>-->
-<!--        body {-->
-<!--            font-family: 'Arial', sans-serif;-->
-<!--            margin: 0;-->
-<!--            padding: 0;-->
-<!--            background-color: #f4f4f4;-->
-<!--            text-align: center;-->
-<!--            }-->
-
-<!--        header {-->
-<!--            background-color: #333;-->
-<!--            color: #fff;-->
-<!--            padding: 1em;-->
-<!--        }-->
-
-<!--        h1 {-->
-<!--            margin-bottom: 10px;-->
-<!--        }-->
-
-<!--        p {-->
-<!--            color: #555;-->
-<!--            margin-top: 10px;-->
-<!--        }-->
-
-<!--        #search-container {-->
-<!--            margin-top: 50px;-->
-<!--        }-->
-
-<!--        #search-bar {-->
-<!--            padding: 10px;-->
-<!--            width: 300px;-->
-<!--            border: 1px solid #ccc;-->
-<!--            border-radius: 5px 0 0 5px;-->
-<!--            outline: none;-->
-<!--        }-->
-
-<!--        #search-button {-->
-<!--            padding: 10px;-->
-<!--            border: 1px solid #ccc;-->
-<!--            border-radius: 0 5px 5px 0;-->
-<!--            cursor: pointer;-->
-<!--            background-color: #4CAF50;-->
-<!--            color: #fff;-->
-<!--        }-->
-<!--    </style>-->
-<!--</head>-->
-<!--<body>-->
-<!--<header>-->
-<!--    <h1>Yata Marketplace</h1>-->
-<!--</header>-->
-
-<!--<div id="search-container">-->
-<!--    <input type="text" id="search-bar" placeholder="Search...">-->
-<!--    <button id="search-button" onclick="search()">Search</button>-->
-<!--</div>-->
-
-<!--<h2>Welcome to Yata Marketplace</h2>-->
-<!--<p>The place where you can find anything</p>-->
-
-<!--<script>-->
-<!--    function search() {-->
-<!--        // You can add your search functionality here-->
-<!--        alert('Search functionality will be implemented here.');-->
-<!--    }-->
-<!--</script>-->
-<!--</body>-->
-<!--</html>-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>User Registration</title>
+    <title>Yata Marketplace</title>
+    <style>
+        [onclick] {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
-<div class="form-container">
-    <form id="registrationForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+<!-- Yata Marketplace Page -->
+<div style="width: 1080px; height: 760px; position: relative; background: white">
+    <div style="width: 1440px; height: 110px; left: 0px; top: 0px; position: absolute; background: white; border: 1px #00F0FF solid"></div>
+    <a href="https://example.com/home">
+        <div style="width: 212px; height: 70px; left: 1202px; top: 20px; position: absolute">
+            <div style="width: 212px; height: 70px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 30px; border: 1px #00F0FF solid"></div>
+            <div style="left: 21px; top: 16px; position: absolute; color: #00F0FF; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word">Developers</div>
+        </div>
+    </a>
+    <div style="width: 750px; height: 60px; left: 265px; top: 533px; position: absolute; background: white; border-radius: 30px; border: 2px #00F0FF solid; overflow: hidden;">
+        <!-- Search Bar Filler -->
+        <input type="text" id="searchInput" placeholder="Type anything" style="width: 100%; height: 100%; border: none; outline: none; padding: 0px 5px 5px 15px; font-size: 24px; border-radius: 28px;">
+    </div>
+    <div style="width: 150px; height: 60px; left: 1024px; top: 533px; position: absolute">
+        <div style="width: 150px; height: 60px; left: 0px; top: 0px; position: absolute; background: #00F0FF; border-radius: 30px; border: 2px #00F0FF solid">
+            <!-- Search Button -->
+            <button id="searchButton" style="width: 100%; height: 100%; border: none; outline: none; background: none; color: white; font-size: 32px; font-family: Inter; font-weight: 400; cursor: pointer;">Search</button>
+        </div>
+    </div>
+    <a href="https://example.com/home">
+        <div style="width: 120px; height: 70px; left: 1060px; top: 20px; position: absolute">
+            <div style="width: 120px; height: 70px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 30px; border: 1px #00F0FF solid"></div>
+            <div style="left: 15px; top: 16px; position: absolute; color: #00F0FF; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word">Home</div>
+        </div>
+    </a>
+    <div style="left: 24px; top: 36px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word">Yata Marketplace</div>
+    <div style="width: 909px; height: 76px; left: 265px; top: 291px; position: absolute"><span style="color: black; font-size: 64px; font-family: Inter; font-weight: 400; word-wrap: break-word">Welcome to </span><span style="color: #00F0FF; font-size: 64px; font-family: Inter; font-weight: 400; word-wrap: break-word">Yata</span><span style="color: black; font-size: 64px; font-family: Inter; font-weight: 400; word-wrap: break-word"> </span><span style="color: #00F0FF; font-size: 64px; font-family: Inter; font-weight: 400; word-wrap: break-word">Marketplace</span></div>
+    <div style="left: 410px; top: 429px; position: absolute; color: black; font-size: 36px; font-family: Inter; font-weight: 400; word-wrap: break-word">A place where you can find anything</div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <input type="submit" value="Submit">
-    </form>
+    <script>
+        document.getElementById('searchButton').addEventListener('click', function () {
+            var searchTerm = document.getElementById('searchInput').value;
+            alert('Searching for: ' + searchTerm);
+        });
+    </script>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="js/cookie.js"></script>
-<script src="js/home.js"></script>
+<!-- Categories Page -->
+<div style="width: 1080px; height: 760px; position: relative; background: white">
+    <div style="width: 1440px; height: 0px; left: 0px; top: 15px; position: absolute; border: 1px #00F0FF solid"></div>
+    <div style="left: 555px; top: 38px; position: absolute; color: black; font-size: 64px; font-family: Inter; font-weight: 400; word-wrap: break-word">Categories</div>
+    <!-- Rectangular Figures -->
+    <div onclick="handleClick('category1');" style="width: 300px; height: 500px; left: 40px; top: 187px; position: absolute; background: white; border-radius: 30px; border: 1px #00F0FF solid"></div>
+    <div onclick="handleClick('category2');" style="width: 300px; height: 500px; left: 735px; top: 187px; position: absolute; background: white; border-radius: 30px; border: 1px #00F0FF solid"></div>
+    <div onclick="handleClick('category3');" style="width: 300px; height: 500px; left: 395px; top: 187px; position: absolute; background: white; border-radius: 30px; border: 1px #00F0FF solid"></div>
+    <div onclick="handleClick('category4');" style="width: 300px; left: 40px; top: 175px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word"></div>
+    <div onclick="handleClick('category5');" style="width: 300px; left: 1090px; top: 175px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word"></div>
+    <div onclick="handleClick('category6');" style="width: 300px; left: 395px; top: 175px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word"></div>
+    <div onclick="handleClick('category7');" style="width: 300px; left: 735px; top: 175px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word"></div>
+    <div onclick="handleClick('category8');" style="width: 300px; height: 500px; left: 1090px; top: 187px; position: absolute; background: white; border-radius: 30px; border: 1px #00F0FF solid"></div>
+</div>
+
+<!-- Recommendations Page -->
+<a name="home"></a>
+
+<!-- Generate Recommendation Elements -->
+<a name="recommendations"></a>
+<div style="width: 1080px; height: 760px; position: relative; background: white">
+    <div style="width: 1440px; height: 0px; left: 0px; top: 15px; position: absolute; border: 1px #00F0FF solid"></div>
+    <div style="width: 408px; left: 33px; top: 35px; position: absolute">
+        <span style="color: black; font-size: 48px; font-family: Inter; font-weight: 400; word-wrap: break-word">Your daily</span>
+        <span style="color: #00F0FF; font-size: 48px; font-family: Inter; font-weight: 400; word-wrap: break-word"> recommendations</span>
+        <span style="color: black; font-size: 48px; font-family: Inter; font-weight: 400; word-wrap: break-word"> based on your history</span>
+    </div>
+
+    <!-- Generate Recommendation Elements -->
+    <script>
+        function generateRecommendation(id, left, top) {
+            document.write(`
+        <div onclick="handleClick('${id}');" style="width: 393px; height: 197px; left: ${left}px; top: ${top}px; position: absolute;">
+          <div style="width: 393px; height: 197px; background: white; border-radius: 30px; border: 1px #00F0FF solid; position: absolute;">
+            <div style="width: 98.58px; height: 105.54px; left: 28.92px; top: 28.85px; background: white; border-radius: 30px; border: 1px black solid; position: absolute;"></div>
+            <div style="width: 245.13px; height: 27.44px; left: 147.87px; top: 54.17px; color: black; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word; position: absolute;">Name: </div>
+            <div style="width: 245.13px; height: 27.44px; left: 147.87px; top: 80.21px; color: black; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word; position: absolute;">Price: </div>
+          </div>
+        </div>
+      `);
+        }
+
+        // Call the function to generate recommendation elements
+        generateRecommendation('Recommendation 1', 516, 89);
+        generateRecommendation('Recommendation 2', 1000, 89);
+        generateRecommendation('Recommendation 3', 516, 312);
+        generateRecommendation('Recommendation 4', 33, 316);
+        generateRecommendation('Recommendation 5', 516, 543);
+        generateRecommendation('Recommendation 6', 1000, 543);
+        generateRecommendation('Recommendation 7', 33, 543);
+        generateRecommendation('Recommendation 8', 1000, 316);
+    </script>
+
+    <script>
+        function handleClick(recommendation) {
+            alert('Clicked on ' + recommendation);
+            // Add your logic here to handle the click event for each recommendation
+        }
+    </script>
+</div>
 
 </body>
 </html>
