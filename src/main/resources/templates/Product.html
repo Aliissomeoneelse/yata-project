@@ -3,41 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clickable Buttons</title>
+    <title>Yata Marketplace</title>
     <style>
-
-        .clickable {
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+        .form-container {
+            width: 350px;
+            height: 49px;
+            position: fixed;
+            background: white;
+            border-radius: 20px;
+            border: 2px solid black;
+        }
+        input {
+            width: calc(100% - 20px);
+            height: 100%;
+            padding: 0px 5px 5px 15px;
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 16px;
+        }
+        .form-label {
+            position: absolute;
+            color: black;
+            font-size: 24px;
+            font-weight: 400;
+        }
+        .confirm-button {
+            width: 120px;
+            height: 50px;
+            position: absolute;
             cursor: pointer;
+            text-decoration: underline;
+        }
+        .confirm-button {
+            width: 120px;
+            height: 50px;
+            position: absolute;
+            cursor: pointer;
+            text-decoration: underline;
+            transition: background-color 0.3s ease; /* Add transition for a smooth effect */
         }
     </style>
 </head>
 <body>
-<div style="width: 1080px; height: 760px; position: relative; background: white">
-    <div style="width: 758px; height: 39px; left: 651px; top: 73px; position: absolute; color: black; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Name: </div>
-    <div style="width: 758px; height: 444px; left: 651px; top: 194px; position: absolute; color: black; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Description: <br/></div>
-    <div style="width: 758px; left: 651px; top: 133px; position: absolute; color: black; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Price: </div>
-
-    <div id="purchaseButton" class="clickable" style="width: 236px; height: 70px; left: 41px; top: 568px; position: absolute; background: #00F0FF; border-radius: 30px">
-        <div style="width: 217.15px; left: 30.85px; top: 10px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Purchase</div>
+<div style="width: 1400px; height: 800px; position: relative; background: white">
+    <div style="width: 1600px; height: 150px; left: -100px; top: -59px; position: absolute; background: white; border: 1px black solid"></div>
+    <div style="left: 535px; top: 16px; position: absolute; color: black; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Yata Marketplace</div>
+    <div style="width: 1600px; height: 150px; left: -100px; top: 737px; position: absolute; background: white; border: 1px black solid"></div>
+    <div style="left: 484px; top: 754px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Yata Marketplace ©. All rights reserved. 2024</div>
+    <div style="left: 506px; top: 666px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Digital Payments are secured by PCI DSS</div>
+    <div style="left: 588px; top: 700px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Powered by World Bank</div>
+    <div style="left: 267px; top: 482px; position: absolute; color: black; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Validity (Month/Year)</div>
+    <div style="left: 456px; top: 109px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word">Fill in the credit card information</div>
+    <div style="left: 439px; top: 302px; position: absolute; color: black; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Name</div>
+    <div style="left: 405px; top: 362px; position: absolute; color: black; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Surname</div>
+    <div style="left: 354px; top: 422px; position: absolute; color: black; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Card Number</div>
+    <div style="left: 384px; top: 542px; position: absolute; color: black; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">CVV/CVV2</div>
+    <div style="width: 120px; height: 50px; left: 640px; top: 603px; position: absolute">
     </div>
 
-    <div id="wishlistButton" class="clickable" style="width: 322px; height: 70px; left: 41px; top: 671px; position: absolute; background: white; border-radius: 30px; border: 2px #00F0FF solid">
-        <div style="width: 284px; height: 46.67px; left: 19px; top: 9.72px; position: absolute; color: #00F0FF; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Add to Wishlist</div>
+    <div class="form-container" style="left: 525px; top: 292px;">
+        <input type="text" placeholder="Name">
+        <div class="form-label" style="top: -40px; left: 0px;"></div>
     </div>
 
-    <div style="width: 600px; height: 500px; left: 0px; top: 35px; position: absolute; background: white; border: 1px black solid"></div>
+    <div class="form-container" style="left: 525px; top: 351px;">
+        <input type="text" placeholder="Surname">
+        <div class="form-label" style="top: -40px; left: 0px;"></div>
+    </div>
+
+    <div class="form-container" style="left: 525px; top: 410px;">
+        <input type="text" placeholder="Card Number">
+        <div class="form-label" style="top: -40px; left: 0px;"></div>
+    </div>
+
+    <div class="form-container" style="left: 525px; top: 530px;">
+        <input type="text" placeholder="CVV/CVV2">
+        <div class="form-label" style="top: -40px; left: 0px;"></div>
+    </div>
+
+    <div class="form-container" style="left: 525px; top: 470px;">
+        <input type="text" placeholder="MM/YYYY">
+        <div class="form-label" style="top: -40px; left: 0px;"></div>
+    </div>
+
+    <div class="confirm-button" id="confirmButton" style="left: 710px; top: 581px;">
+        <div class="form-label" style="top: 32px; left: -55px;">Confirm</div>
+    </div>
+
+    <img style="width: 115px; height: 99.10px; left: 342px; top: 157px; position: absolute" src="https://via.placeholder.com/115x99" />
+    <img style="width: 115px; height: 99.10px; left: 492px; top: 155px; position: absolute" src="https://via.placeholder.com/115x99" />
+    <img style="width: 115px; height: 99.10px; left: 792px; top: 149px; position: absolute" src="https://via.placeholder.com/115x99" />
+    <img style="width: 115px; height: 79px; left: 942px; top: 160px; position: absolute" src="https://via.placeholder.com/115x79" />
+    <img style="width: 115px; height: 70px; left: 642px; top: 169px; position: absolute" src="https://via.placeholder.com/115x70" />
+
+    <script>
+        document.getElementById('confirmButton').addEventListener('click', function() {
+            alert('Confirm button clicked!'); // You can replace this with your actual logic
+        });
+    </script>
 </div>
-
-<script>
-    document.getElementById('purchaseButton').addEventListener('click', function() {
-        // Add your JavaScript code for the "Purchase" button here
-        alert("Purchase button clicked!");
-    });
-
-    document.getElementById('wishlistButton').addEventListener('click', function() {
-        // Add your JavaScript code for the "Add to Wishlist" button here
-        alert("Add to Wishlist button clicked!");
-    });
-</script>
 </body>
 </html>
