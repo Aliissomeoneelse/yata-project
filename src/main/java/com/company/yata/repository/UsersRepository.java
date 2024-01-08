@@ -16,4 +16,7 @@ public interface UsersRepository extends JpaRepository<Users, Integer> {
     Optional<Users> findByIdAndDeletedAtIsNull(@Param(value = "id") Integer id);
 
     Page<Users> findByDeletedAtIsNull(Pageable pageable);
+
+    Optional<Users> findByEmailAndDeletedAtIsNull(String email);
+
 }

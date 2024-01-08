@@ -1,0 +1,77 @@
+:root {
+    --primary-color: #6a82fb;
+    --secondary-color: #fc5c7d;
+    --font-color: #ffffff;
+    --accent-font-color: #333333;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--font-color);
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header, .logo, .nav-list a {
+    color: var(--accent-font-color);
+}
+
+.main {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--accent-font-color);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 20px 0;
+}
+
+.sign-up-form {
+    text-align: center;
+}
+
+.sign-up-form form{
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    /*width: 100%;*/
+    margin-bottom: 15px;
+}
+
+.submit-button {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-color);
+}

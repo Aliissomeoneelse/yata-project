@@ -6,6 +6,8 @@ import com.company.yata.mapper.UsersMapper;
 import com.company.yata.models.Users;
 import com.company.yata.repository.UsersRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -20,6 +22,7 @@ import java.util.Optional;
 public class UsersService {
     private final UsersRepository usersRepository;
     private final UsersMapper usersMapper;
+
     public ResponseDto<UsersDto> create(UsersDto dto) {
         try {
             Users user = usersMapper.toEntity(dto);
@@ -85,7 +88,7 @@ public class UsersService {
                     .build();
         }
         try {
-            Users user =optional.get();
+            Users user = optional.get();
             usersMapper.updateUsersFromDto(dto, optional.get());
             user.setId(optional.get().getId());
             user.setUpdatedAt(LocalDateTime.now());
@@ -124,6 +127,45 @@ public class UsersService {
         } catch (Exception e) {
             return ResponseDto.<UsersDto>builder()
                     .message("User while deleting error :: " + e.getMessage())
+                    .code(-1)
+                    .build();
+        }
+    }
+
+    public ResponseDto<UsersDto> login(UsersDto dto) {
+        Optional<Users> optional = usersRepository.findByEmailAndDeletedAtIsNull(dto.getEmail());
+
+        if (optional.isEmpty()) {
+            return ResponseDto.<UsersDto>builder()
+                    .message("User not found")
+                    .code(-3)
+                    .data(null)
+                    .build();
+        }
+
+        Users foundUser = optional.get();
+
+        // Validate the password using PasswordEncoder
+        if (!dto.getPassword().equals(foundUser.getPassword())) {
+            return ResponseDto.<UsersDto>builder()
+                    .message("Invalid password")
+                    .code(-4)
+                    .data(null)
+                    .build();
+        }
+        try {
+            Users user = optional.get();
+            user.setId(foundUser.getId());
+            usersMapper.updateUsersFromDto(dto, optional.get());
+            return ResponseDto.<UsersDto>builder()
+                    .message("Login successful")
+                    .code(1)
+                    .success(true)
+                    .data(usersMapper.toDto(user))
+                    .build();
+        } catch (Exception e) {
+            return ResponseDto.<UsersDto>builder()
+                    .message("User while log in error :: " + e.getMessage())
                     .code(-1)
                     .build();
         }

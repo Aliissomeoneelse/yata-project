@@ -40,4 +40,10 @@ public class UsersController {
     public ResponseDto<UsersDto> delete(@PathVariable("id") Integer id) {
         return usersService.delete(id);
     }
+
+    @CrossOrigin(origins = "*")
+    @PostMapping("/login")
+    public ResponseDto<UsersDto> login(@RequestBody UsersDto dto) {
+        return usersService.login(dto);
+    }
 }
