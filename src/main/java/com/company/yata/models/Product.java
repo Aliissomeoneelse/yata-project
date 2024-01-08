@@ -25,6 +25,12 @@ public class Product {
     @Column(name = "image_id")
     private Integer imageId;
 
+    @Column(name = "basket_id")
+    private Integer basketId;
+
+    @Column(name = "wishlist_id")
+    private Integer wishlistId;
+
     @Column(name = "created_at")
     private LocalDateTime createdAt;
     @Column(name = "updated_at")

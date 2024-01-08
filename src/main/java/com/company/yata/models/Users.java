@@ -23,6 +23,12 @@ public class Users {
     @OneToMany(mappedBy = "usersId")
     private Set<Card> cards;
 
+    @OneToMany(mappedBy = "usersId")
+    private Set<Basket> baskets;
+
+    @OneToMany(mappedBy = "usersId")
+    private Set<Wishlist> wishlists;
+
     @Column(name = "created_at")
     private LocalDateTime createdAt;
     @Column(name = "updated_at")
