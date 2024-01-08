@@ -1,63 +1,180 @@
+/* styles.css */
+:root {
+    --primary-color: #6a82fb;  /* primary color for background */
+    --secondary-color: #fc5c7d; /* secondary color for background */
+    --font-color: #ffffff;      /* general font color for good contrast */
+    --accent-font-color: #333333; /* accent color for headings or important text */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--font-color); /* using the defined font color */
+}
+
+/* Update specific elements as needed to use the accent font color */
+.header, .logo, .nav-list a {
+    color: var(--accent-font-color); /* This color is for better visibility and emphasis */
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* styles.css */
+.logo {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    font-size: 48px; /* Adjust size to suit your design */
+    font-weight: 600; /* 600 is semi-bold, makes the text stand out */
+    color: #333; /* Dark color for contrast, or choose another modern color */
+    text-transform: uppercase; /* Optional: makes it more impactful */
+    letter-spacing: 1px; /* Slightly spread out the letters */
+    /* Optional: Add a subtle text shadow for depth */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+    position: relative;
+}
+
+.nav-list li:last-child {
+    margin-right: 0;
+}
+
+.nav-list a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400; /* Regular weight */
+    color: #333; /* Dark color for better contrast */
+    text-transform: uppercase; /* Consistency in design */
+    letter-spacing: 1px; /* Spacing out letters */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+    text-decoration: none;
+}
+
+.nav-list a:hover {
+    color: #6a82fb; /* Highlight color on hover */
+}
+
+.nav-list a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -3px; /* Adjust the position to place the underline below the text */
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+    background-color: var(--accent-font-color); /* Use accent color for consistency */
+    visibility: hidden; /* Hide until hover */
+}
+
+.nav-list a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    visibility: visible;
+}
+
+.main {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px; /* Larger size for prominence */
+    font-weight: 700; /* Bold weight */
+    color: #333; /* Dark color for contrast */
+    text-transform: uppercase; /* Impactful presentation */
+    letter-spacing: 1.5px; /* Slightly more spacing for larger text */
+    margin: 20px 0; /* Adjusted spacing around the title */
+}
+
+.search-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
-.form-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.search-input {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid grey;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    width: 350px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+.search-button {
+    font-family: 'Poppins', sans-serif;
+    padding: 7px 20px;
+    font-size: 20px;
+    font-weight: 500; /* Medium weight */
+    color: white; /* Light text on dark backgrounds */
+    background-color: #6a82fb; /* Modern and vibrant background */
+    border: none; /* Removing default border */
+    border-radius: 0 10px 10px 0; /* Rounded corners for modern look */
+    cursor: pointer; /* Indicates button is clickable */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
-label {
-    margin-bottom: 8px;
+.search-button:hover {
+    background-color: #fc5c7d; /* Change color on hover for interaction feedback */
 }
 
-input {
-    padding: 8px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Elements move up slightly as they fade in */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-input[type="submit"] {
-    background-color: #4caf50;
-    color: #fff;
-    cursor: pointer;
+/* Applying the fade-in effect to header and other divs */
+.header, .container, .main {
+    animation: fadeIn 1s ease-out forwards; /* Adjust timing as necessary */
 }
 
-.user-profile {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* You might want to delay the animations for different elements */
+.header {
+    animation-delay: 0.2s; /* Header appears first */
 }
 
-h1 {
-    text-align: center;
+.container {
+    animation-delay: 0.4s; /* Then container */
 }
 
-.user-details {
-    margin-top: 20px;
-}
-
-p {
-    margin: 5px 0;
-}
-
-strong {
-    font-weight: bold;
+.main {
+    animation-delay: 0.6s; /* Finally, the main content */
 }
