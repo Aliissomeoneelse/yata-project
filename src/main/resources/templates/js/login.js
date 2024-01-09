@@ -19,6 +19,11 @@ $(document).ready(function () {
                 if (response.success) {
                     // Successful login, perform actions like redirecting or showing a success message
                     alert("Login successful!");
+                    let id = response.data.id;
+                    $.cookie("id", id);
+                    sessionStorage.setItem('id', response.data.id);
+                    // Redirect to home page
+                    window.location.href = 'home.html';
                     // Redirect to the user dashboard or another page
                     // window.location.href = "dashboard.html";
                 } else {
