@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css"> <!-- Create a separate CSS file for styles -->
     <!-- Add this line in the <head> section of your HTML -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -14,21 +15,23 @@
     <header class="header">
         <h1 class="logo">Yata Marketplace</h1>
 
-        <section class="search-container">
-            <input type="text" class="search-input" placeholder="Type anything">
-            <button class="search-button">Search</button>
-        </section>
+        <!--        <section class="search-container">-->
+        <!--            <input type="text" class="search-input" placeholder="Type anything">-->
+        <!--            <button class="search-button">Search</button>-->
+        <!--        </section>-->
 
         <nav class="nav">
             <ul class="nav-list">
                 <li><a href="signup.html">Sign Up</a></li>
                 <li><a href="login.html">Log In</a></li>
+                <li><a href="shop.html">Shop</a></li>
                 <li><a href="developers.html">Developers</a></li>
                 <li><a href="home.html">Home</a></li>
+                <li><a href="cabinet.html"><i class="fa fa-user"></i> <span id="userUsername"></span></a></li>
             </ul>
         </nav>
+        <!-- Add this code to display the user's username and icon -->
 
-        <!-- Move the entire search container to the header -->
 
     </header>
 
@@ -41,26 +44,6 @@
     </main>
 </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var searchInput = document.querySelector('.search-input');
-        var searchButton = document.querySelector('.search-button');
-        var searchHeaderButton = document.querySelector('.search-header-button'); // Add this line to select the header search button
-
-        // Add an event listener to the header search button
-        searchHeaderButton.addEventListener('click', function () {
-            var searchTerm = searchInput.value;
-            alert('You searched for: ' + searchTerm);
-            // You can add more code here to perform the actual search action.
-            // For example, you can redirect the user to a search results page.
-        });
-
-        // The existing event listener for the main search button remains unchanged.
-        searchButton.addEventListener('click', function () {
-            var searchTerm = searchInput.value;
-            alert('You searched for: ' + searchTerm);
-        });
-    });
-</script> <!-- Create a separate JS file for scripts -->
+<script src="js/home.js"></script> <!-- Create a separate JS file for scripts -->
 </body>
 </html>

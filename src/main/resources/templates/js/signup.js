@@ -22,6 +22,9 @@ $(document).ready(function() {
                     alert("User created successfully!");
                     let id = response.data.id;
                     $.cookie("id", id);
+                    sessionStorage.setItem('id', response.data.id);
+                    // Redirect to home page
+                    window.location.href = 'home.html';
                     // You can perform other actions with the response data here
                 } else {
                     alert("User creation failed: " + response.message);

@@ -1,9 +1,8 @@
-/* login.css */
+/* cabinet.css */
 :root {
     --primary-color: #6a82fb;
     --secondary-color: #fc5c7d;
-    --font-color: #ffffff;
-    --accent-font-color: #333333;
+    --font-color: #333333;
 }
 
 body {
@@ -14,7 +13,7 @@ body {
 }
 
 .header, .logo, .nav-list a {
-    color: var(--accent-font-color);
+    color: var(--font-color);
 }
 
 .container {
@@ -83,7 +82,7 @@ body {
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease-out;
-    background-color: var(--accent-font-color);
+    background-color: #6a82fb;
     visibility: hidden;
 }
 
@@ -108,7 +107,7 @@ body {
     margin: 20px 0;
 }
 
-.login-form {
+.user-info {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -117,33 +116,10 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.login-form form{
-    display: flex;
-    flex-direction: column;
-}
-
-.input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    outline: none;
-}
-
-.submit-button {
+.user-info p {
     font-family: 'Poppins', sans-serif;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: 500;
-    color: white;
-    background-color: #6a82fb;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
-.submit-button:hover {
-    background-color: #fc5c7d;
-}
+/* Add more styles as needed for user information */

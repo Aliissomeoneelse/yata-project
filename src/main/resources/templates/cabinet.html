@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/signup.css">
-    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/cabinet.css"> <!-- Include your CSS file -->
+    <title>User Cabinet</title>
 </head>
 <body>
 <div class="container">
@@ -18,26 +18,23 @@
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="developers.html">Developers</a></li>
                 <li><a href="home.html">Home</a></li>
-                <li><i class="fa fa-user"></i> <span id="userUsername"></span></li>
+                <li><a href="cabinet.html"><i class="fa fa-user"></i> <span id="userUsername"></span></a></li>
             </ul>
         </nav>
     </header>
 
     <main class="main">
-        <h1 class="hero-title">Sign Up</h1>
-        <div class="sign-up-form">
-            <form id="registrationForm">
-                <input type="text" class="input" placeholder="Username" id="username">
-                <input type="email" class="input" placeholder="Email" id="email">
-                <input type="password" class="input" placeholder="Password" id="password">
-                <button class="submit-button">Sign Up</button>
-            </form>
+        <h1 class="hero-title">User Cabinet</h1>
+        <div class="user-info">
+            <!-- Display user information here -->
+            <p><strong>Username:</strong> <span id="username"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <!-- Add more user information as needed -->
         </div>
     </main>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/cookie.js"></script>
-<script src="js/signup.js"></script>
-
+<script src="js/cabinet.js"></script> <!-- Include your JavaScript file -->
 </body>
 </html>

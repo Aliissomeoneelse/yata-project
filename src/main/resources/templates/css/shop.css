@@ -1,8 +1,8 @@
-/* styles.css */
+/* Continue from previous CSS */
 :root {
-    --primary-color: #6a82fb;  /* primary color for background */
+    --primary-color: #6a82fb; /* primary color for background */
     --secondary-color: #fc5c7d; /* secondary color for background */
-    --font-color: #ffffff;      /* general font color for good contrast */
+    --font-color: #ffffff; /* general font color for good contrast */
     --accent-font-color: #333333; /* accent color for headings or important text */
 }
 
@@ -41,7 +41,7 @@ body {
     text-transform: uppercase; /* Optional: makes it more impactful */
     letter-spacing: 1px; /* Slightly spread out the letters */
     /* Optional: Add a subtle text shadow for depth */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -179,8 +179,58 @@ body {
     animation-delay: 0.6s; /* Finally, the main content */
 }
 
-#userProfile i.fa-user {
-    font-size: 24px; /* Set the size of the icon */
-    color: #333; /* Set the color of the icon */
-    /* Additional styling */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Gap between products */
+}
+
+.product-card {
+    width: 300px; /* Or desired width */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+    animation: fadeIn 1s ease-out forwards; /* Consistent animation */
+}
+
+.product-card img {
+    width: 100%; /* Responsive image size */
+    height: auto;
+    border-radius: 5px; /* Slightly rounded corners for the image */
+}
+
+.product-name {
+    font-size: 22px;
+    color: var(--accent-font-color); /* Using the defined accent color */
+    margin: 10px 0;
+}
+
+.product-description {
+    font-size: 16px;
+    color: var(--font-color);
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 20px;
+    color: var(--secondary-color); /* Highlighting price with secondary color */
+    margin-bottom: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
 }

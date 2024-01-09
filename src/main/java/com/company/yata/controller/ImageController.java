@@ -25,7 +25,7 @@ public class ImageController {
         return imageService.download(id);
     }
     @CrossOrigin(origins = "*")
-    @GetMapping(value = ("/get-image-by-user/{id}"))
+    @GetMapping(value = ("/get-image-by-product/{id}"))
     public ResponseDto<Set<ImageDto>> get(@PathVariable("id") Integer id) {
         return imageService.get(id);
     }
