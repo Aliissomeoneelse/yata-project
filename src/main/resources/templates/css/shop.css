@@ -1,8 +1,7 @@
-CSS
 :root {
-    --primary-color: #6a82fb; /* primary color for background */
+    --primary-color: #6a82fb;  /* primary color for background */
     --secondary-color: #fc5c7d; /* secondary color for background */
-    --font-color: #ffffff; /* general font color for good contrast */
+    --font-color: #ffffff;      /* general font color for good contrast */
     --accent-font-color: #333333; /* accent color for headings or important text */
 }
 
@@ -53,7 +52,7 @@ body {
     text-transform: uppercase; /* Optional: makes it more impactful */
     letter-spacing: 1px; /* Slightly spread out the letters */
     /* Optional: Add a subtle text shadow for depth */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 .developers-container {
@@ -88,13 +87,6 @@ body {
     text-align: left;
     margin: 5px 0;
     color: #555;
-}
-
-.nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
 }
 
 .nav-list {
@@ -222,4 +214,10 @@ body {
 
 .main {
     animation-delay: 0.6s; /* Finally, the main content */
+}
+
+#userProfile i.fa-user {
+    font-size: 24px; /* Set the size of the icon */
+    color: #333; /* Set the color of the icon */
+    /* Additional styling */
 }
