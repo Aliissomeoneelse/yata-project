@@ -4,62 +4,185 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
-    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/shop.css"> <!-- Create a separate CSS file for styles -->
+    <!-- Add this line in the <head> section of your HTML -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
+<div>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">Yata Marketplace</h1>
+
+            <section class="search-container">
+                <input type="text" class="search-input" placeholder="Type anything">
+                <button class="search-button">Search</button>
+            </section>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="developers.html">Developers</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="cabinet.html"><i class="fa fa-user"></i> <span id="userUsername"></span></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            <section class="hero">
+                <h2 class="hero-title">The only place where you can find anything you want</h2>
+                <h2 class="hero-title">________________________________________</h2>
+                <h2 class="hero-title">Recommendations</h2>
+            </section>
+        </main>
+
+        <div class="developers-container">
+
+            <div class="developer-card">
+                <div class="your-element">
+                    <img src="images/rtx.jfif" alt="Graphics Card">
+                    <p>Name: Graphics Card</p>
+                    <p>Price: 500$</p>
+                    <p>Description: Perfect for gaming</p>
+                </div>
+            </div>
+
+            <div class="developer-card">
+                <div class="your-element">
+                    <img src="images/t%20shirt.jfif" alt="T Shirt">
+                    <p>Name: T-shirt</p>
+                    <p>Price: 10$</p>
+                    <p>Description: Looks stylish during the summer</p>
+                </div>
+            </div>
+
+            <div class="developer-card">
+                <div class="your-element">
+                    <img src="images/pillow.jfif" alt="Pillow">
+                    <p>Name: Pillow</p>
+                    <p>Price: 5$</p>
+                    <p>Description: Quite comfy for sleeping</p>
+                </div>
+            </div>
+
+            <div class="developer-card">
+                <div class="your-element">
+                    <img src="images/tv.jfif" alt="Television">
+                    <p>Name: Television</p>
+                    <p>Price: 1000$</p>
+                    <p>Description: Watch anything you want</p>
+                </div>
+            </div>
+
+            <div class="developer-card">
+                <div class="your-element">
+                    <img src="images/notebook.jfif" alt="Notebook">
+                    <p>Name: Notebook</p>
+                    <p>Price: 2$</p>
+                    <p>Description: Handy for study</p>
+                </div>
+            </div>
+
+            <div class="developer-card">
+                <div class="your-element">
+                    <img src="images/phone.jfif" alt="Phone">
+                    <p>Name: Phone</p>
+                    <p>Price: 200$</p>
+                    <p>Description: Must have device for everyone</p>
+                </div>
+            </div>
+
+            <div class="developer-card">
+                <div class="your-element">
+                    <img src="images/ak47.jfif" alt="AK">
+                    <p>Name: Ak-47</p>
+                    <p>Price: 2000$</p>
+                    <p>Description: Good for defence</p>
+                </div>
+            </div>
+            <div class="developer-card">
+                <div class="your-element">
+                    <img src="images/screw.png" alt="AK">
+                    <p>Name: Screwdriver</p>
+                    <p>Price: 15$</p>
+                    <p>Description: Repair what you want</p>
+                </div>
+            </div>
+
+            <div class="developer-card">
+                <div class="your-element">
+                    <img src="images/shampoo.jpg" alt="AK">
+                    <p>Name: Shampoo</p>
+                    <p>Price: 3$</p>
+                    <p>Description: Feel the freshness</p>
+                </div>
+            </div>
+
+            <div class="developer-card">
+                <div class="your-element">
+                    <img src="images/rose.jpg" alt="AK">
+                    <p>Name: Roses</p>
+                    <p>Price: 101$</p>
+                    <p>Description: Great for your girl</p>
+                </div>
+            </div>
+
+            <div class="developer-card">
+                <div class="your-element">
+                    <img src="images/micro.jfif" alt="Microwave">
+                    <p>Name: Microwave</p>
+                    <p>Price: 50$</p>
+                    <p>Description: Best for heating meals</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="developer-card">
+                    <div class="your-act" id="clickableElement">
+                        <div class="your-element">
+                            <img src="images/pants.jfif" alt="Pants">
+                            <p>Name: Pants</p>
+                            <p>Price: 30$</p>
+                            <p>Description: Suits best in wedding</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    >
+</div>
+>
 <body>
 
-<div class="container">
-    <header class="header">
-        <h1 class="logo">Yata Marketplace</h1>
 
-        <section class="search-container">
-            <input type="text" class="search-input" placeholder="Type anything">
-            <button class="search-button">Search</button>
-        </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var searchInput = document.querySelector('.search-input');
+        var searchButton = document.querySelector('.search-button');
+        var searchHeaderButton = document.querySelector('.search-header-button');
 
-        <nav class="nav">
-            <ul class="nav-list">
-                <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="login.html">Log In</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="developers.html">Developers</a></li>
-                <li><a href="home.html">Home</a></li>
-            </ul>
-        </nav>
+        searchHeaderButton.addEventListener('click', function () {
+            var searchTerm = searchInput.value;
+            alert('You searched for: ' + searchTerm);
+        });
 
-        <!-- Move the entire search container to the header -->
+        var clickableElement = document.getElementById("clickableElement");
 
-    </header>
-    <main class="main">
-        <section class="hero">
-            <h2 class="hero-title">Shop the world's finest goods</h2>
-        </section>
+        clickableElement.addEventListener("click", function () {
+            alert("Product Clicked!");
+        });
 
-        <section class="products">
-            <!-- Example of a product card -->
-            <div class="product-card" id="product1">
-                <!-- Image will be loaded here -->
-                <img src="" alt="Product Image" class="product-image">
-                <h3 class="product-name">Loading...</h3>
-                <p class="product-description">Fetching details...</p>
-                <p class="product-price">Loading...</p>
-                <button class="btn">Add to Cart</button>
-            </div>
-            <div class="product-card" id="product2">
-                <!-- Image will be loaded here -->
-                <img src="" alt="Product Image" class="product-image">
-                <h3 class="product-name">Loading...</h3>
-                <p class="product-description">Fetching details...</p>
-                <p class="product-price">Loading...</p>
-                <button class="btn">Add to Cart</button>
-            </div>
-            <!-- Repeat for other products -->
-        </section>
-
-    </main>
-</div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="js/shop.js"></script> <!-- Linking to a separate JS file -->
+        searchButton.addEventListener('click', function () {
+            var searchTerm = searchInput.value;
+            alert('You searched for: ' + searchTerm);
+        });
+    });
+</script>
+<script src="js/cookie.js"></script>
+<script src="js/shop.js"></script>
 </body>
+
 </html>

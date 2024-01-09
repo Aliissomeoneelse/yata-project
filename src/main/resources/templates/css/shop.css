@@ -1,4 +1,4 @@
-/* Continue from previous CSS */
+CSS
 :root {
     --primary-color: #6a82fb; /* primary color for background */
     --secondary-color: #fc5c7d; /* secondary color for background */
@@ -32,6 +32,18 @@ body {
     padding: 20px 0;
 }
 
+.your-element {
+    display: block;
+    padding: 1px;
+    border: 1px solid #ccc;
+    cursor: pointer; /* Set the default cursor style */
+}
+
+.your-element:hover {
+    background-color: #f0f0f0; /* Add your desired hover effect */
+    color: #333; /* Add your desired text color on hover */
+}
+
 /* styles.css */
 .logo {
     font-family: 'Poppins', sans-serif; /* Modern font */
@@ -44,6 +56,39 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.developers-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.developer-card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 15px;
+    width: 300px;
+}
+
+.developer-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.developer-card h2 {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.developer-card p {
+    padding: 0px 5px 5px 15px;
+    text-align: left;
+    margin: 5px 0;
+    color: #555;
+}
 
 .nav-list {
     list-style: none;
@@ -177,60 +222,4 @@ body {
 
 .main {
     animation-delay: 0.6s; /* Finally, the main content */
-}
-
-.products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px; /* Gap between products */
-}
-
-.product-card {
-    width: 300px; /* Or desired width */
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    text-align: center;
-    animation: fadeIn 1s ease-out forwards; /* Consistent animation */
-}
-
-.product-card img {
-    width: 100%; /* Responsive image size */
-    height: auto;
-    border-radius: 5px; /* Slightly rounded corners for the image */
-}
-
-.product-name {
-    font-size: 22px;
-    color: var(--accent-font-color); /* Using the defined accent color */
-    margin: 10px 0;
-}
-
-.product-description {
-    font-size: 16px;
-    color: var(--font-color);
-    margin-bottom: 10px;
-}
-
-.product-price {
-    font-size: 20px;
-    color: var(--secondary-color); /* Highlighting price with secondary color */
-    margin-bottom: 15px;
-}
-
-.btn {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: var(--secondary-color);
 }
